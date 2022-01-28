@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -16,6 +16,9 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "baseUrl": "src/",
-  "include": ["images.d.ts", "**/*.ts", "**/*.tsx", "src/"]
+  "include": ["images.d.ts", "**/*.ts", "**/*.tsx", "src/", "server/**/*"],
+  "exclude": ["server/**/*"],
+  "ts-node": { "compilerOptions": { "module": "commonjs" } }
 }
+
+// Reference: https://medium.com/@anwesha_das a-strongly-typed-create-react-app-with-an-express-api-server-44e2334ccc71

@@ -1,0 +1,23 @@
+@import "~antd/dist/antd.css";
+
+:root {
+  --text-color: #1b83f7;
+}
+
+.ErrorContainer {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ErrorContainer h3 {
+  color: var(--text-color);
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  font-size: 1rem;
+}

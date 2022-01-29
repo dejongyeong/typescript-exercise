@@ -1,0 +1,26 @@
+@import "~antd/dist/antd.css";
+
+:root {
+  --loading-indication-color: #1b83f7;
+}
+
+.LoadingContainer {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoadingContainer .ant-spin .ant-spin-text {
+  color: var(--loading-indication-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  letter-spacing: 0.08em;
+}
+
+.LoadingContainer .ant-spin .ant-spin-dot .ant-spin-dot-item {
+  background-color: var(--loading-indication-color);
+}

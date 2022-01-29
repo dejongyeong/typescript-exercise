@@ -3,7 +3,7 @@
 :root {
   --text-font: "Raleway", san-serif;
   --thead-color: #1c1f33;
-  --link-hover-color: #4dfe91;
+  --link-hover-color: rgba(24, 144, 255, 0.75);
 }
 
 .ListContainer {

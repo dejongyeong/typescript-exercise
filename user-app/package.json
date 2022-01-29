@@ -12,6 +12,7 @@
     "@types/node": "^16.11.21",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -41,8 +42,11 @@
     ]
   },
   "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/lodash": "^4.14.178",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
+    "axios": "^0.25.0",
     "body-parser": "^1.19.1",
     "eslint": "^8.7.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -53,9 +57,11 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "lodash": "^4.17.21",
     "nth-check": "^2.0.1",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
+    "react-query": "^3.34.12",
     "react-router-dom": "^6.2.1"
   }
 }

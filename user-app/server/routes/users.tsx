@@ -45,10 +45,6 @@ export const getUser = (req: Request, res: Response): void => {
   const users: User[] = readJsonData();
   const { id } = req.params;
 
-  // index start at 0
-  if (Number(id) > 0 && Number(id) <= Number(users.length)) {
-    res.status(200).send(users[Number(id) - 1]);
-  } else {
-    res.send({});
-  }
+  const result = users.filter((user) => user.id === Number(id));
+  res.status(200).send(result);
 };

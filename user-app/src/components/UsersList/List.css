@@ -1,5 +1,26 @@
 @import "~antd/dist/antd.css";
 
+:root {
+  --text-font: "Raleway", san-serif;
+  --thead-color: #1c1f33;
+  --link-hover-color: #4dfe91;
+}
+
 .ListContainer {
-  color: blue;
+  font-family: var(--text-font);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ListContainer .ant-table-thead > tr > th {
+  color: var(--thead-color);
+  font-weight: 700;
+}
+
+.ListContainer .ant-table-tbody > tr > td > a:hover {
+  color: var(--link-hover-color);
+}
+
+.ListContainer b {
+  font-weight: 600;
 }

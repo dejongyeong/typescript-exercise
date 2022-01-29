@@ -1,0 +1,34 @@
+@import "~antd/dist/antd.css";
+
+:root {
+  --text-font: "Raleway", san-serif;
+}
+
+.UserContainer {
+  width: 100%;
+  margin: 0 auto;
+  font-family: var(--text-font);
+}
+
+.UserContainer > p {
+  letter-spacing: 0.05rem;
+}
+
+.UserContainer .ant-card-body > p > span {
+  font-weight: 700;
+}
+
+.UserContainer .ant-card-body > p:last-child {
+  margin-bottom: 0;
+}
+
+.UserContainer .ant-btn {
+  margin-top: 1rem;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.UserContainer .ant-btn:hover {
+  background-color: rgba(24, 144, 255, 0.7);
+}

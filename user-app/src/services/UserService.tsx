@@ -14,8 +14,8 @@ const getUsers = async (): Promise<IUser[]> => {
   return response.data;
 };
 
-const getUserById = async (id: string | undefined): Promise<IUser> => {
-  const response = await api.get<IUser>(`/users/${id}`);
+const getUserById = async (id: string | undefined): Promise<IUser[]> => {
+  const response = await api.get<IUser[]>(`/users/${id}`);
   return response.data;
 };
 

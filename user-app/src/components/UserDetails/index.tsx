@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import _ from "lodash";
 import UserService from "../../services/UserService";
 import IUser from "../../types/Users";
+import Header from "../Header";
 
 export default function UserDetails(): JSX.Element {
   const params = useParams();
@@ -24,7 +25,7 @@ export default function UserDetails(): JSX.Element {
 
   return (
     <div>
-      <h1>User Details</h1>
+      <Header title='User Details' />
       {_.isEmpty(user) ? "User Not Found" : JSON.stringify(user)}
     </div>
   );

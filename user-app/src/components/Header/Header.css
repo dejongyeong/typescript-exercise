@@ -1,5 +1,19 @@
 @import "~antd/dist/antd.css";
 
-.Header {
-  border: 1px solid black;
+:root {
+  --heading-color: #1c1f33;
+  --text-font: "Raleway", san-serif;
+}
+
+.HeaderContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1rem auto;
+  font-family: "Raleway", sans-serif;
+}
+
+.HeaderContainer h1 {
+  margin: 0;
+  color: var(--heading-color);
+  font-weight: 700;
 }

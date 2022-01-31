@@ -1,34 +1,28 @@
-import React, { useState } from "react";
-import { useQuery } from "react-query";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { Skeleton } from "antd";
 import _ from "lodash";
-import IUser from "../../types/Users";
-import UserService from "../../services/UserService";
+import { useMachine } from "@xstate/react";
 import UserDetail from "./UserDetail";
+import { singleUserMachine } from "../../machine/singleUserMachine";
+
+type TUsersParams = { id?: string | any };
 
 export default function User(): JSX.Element {
-  const params = useParams();
-  const [user, setUser] = useState<IUser[]>([]);
-
-  // useQuery has the same results of useEffect
-  const { isLoading, isError } = useQuery<IUser[], Error>(
-    "query-user-by-id",
-    // it returns an empty array if no users were found
-    async () => UserService.getUserById(params.id),
-    {
-      enabled: true,
-      retry: 0,
-      onSuccess: (res) => {
-        setUser(res);
-      },
-    }
-  );
+  const params = useParams<TUsersParams>();
+  const machine = singleUserMachine(params.id);
+  const [state] = useMachine(machine);
 
   // return JSX element
   return (
-    <Skeleton loading={isLoading} active>
-      <UserDetail user={_.isEmpty(user) || isError ? null : user[0]} />
+    <Skeleton loading={state.matches("loading")} active>
+      <UserDetail
+        user={
+          _.isEmpty(state.context.users) || state.matches("error")
+            ? null
+            : state.context.users[0]
+        }
+      />
     </Skeleton>
   );
 }

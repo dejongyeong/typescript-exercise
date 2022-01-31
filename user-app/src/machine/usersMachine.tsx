@@ -41,3 +41,7 @@ export const usersMachine = createMachine<IUsersContext>(
     },
   }
 );
+
+// Reference: https://egghead.io/lessons/react-invoke-an-xstate-service-when-entering-a-state
+// Reference: https://blog.logrocket.com/using-state-machines-with-xstate-and-react/
+// Reference: https://bestofreactjs.com/repo/davidkpiano-xstate-react-miscellaneous
